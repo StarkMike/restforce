@@ -21,7 +21,6 @@ module Restforce
       # When passed a hash, it will determine what class is appropriate to
       # represent the data.
       def klass(val)
-        pp val
         if val.has_key? 'records'
           # When the hash has a records key, it should be considered a collection
           # of sobject records.

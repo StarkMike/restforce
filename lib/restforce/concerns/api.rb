@@ -128,7 +128,7 @@ module Restforce
       # Returns an Array of Hash for each record in the result if Restforce.configuration.mashify is false.
       def query(soql)
         response = api_get 'query', :q => soql
-        mashify? ? response.body : response.body['records']
+        mashify? ? response.body['records'] : response.body['records']
       end
 
       # Public: Perform a SOSL search
